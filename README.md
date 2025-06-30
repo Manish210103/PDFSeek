@@ -12,7 +12,6 @@ This is a full-stack web application that enables users to upload PDF documents 
 -  *Semantic Search* using FAISS and SentenceTransformers
 -  *Contextual Answers* pulled from most relevant PDF chunks
 -  *MongoDB Integration* for user storage
--  *CORS Support* for Angular frontend
 
 ---
 
