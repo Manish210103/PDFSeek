@@ -1,6 +1,31 @@
 # PDFSeek
 
-This repository contains the **frontend** and **backend** code for the hackathon project. The frontend is built with **Angular**, and the backend is developed using **Flask** with **MongoDB** for database management and **Groq** for API handling.
+This is a full-stack web application that enables users to upload PDF documents and ask questions, with answers generated using *Groq's LLaMA-3.1 model* based on the document context. The backend also provides secure user authentication, semantic search via FAISS, and PDF indexing using sentence-transformers. The frontend is built in Angular for a smooth user experience.
+
+---
+
+## Features
+
+-  *User Authentication* with secure password hashing (signup/login)
+-  *PDF Upload & Processing* using pdfplumber
+-  *AI Question Answering* using Groq's LLaMA-3.1
+-  *Semantic Search* using FAISS and SentenceTransformers
+-  *Contextual Answers* pulled from most relevant PDF chunks
+-  *MongoDB Integration* for user storage
+-  *CORS Support* for Angular frontend
+
+---
+
+##  Tech Stack
+
+| Layer     | Technology                       |
+|-----------|----------------------------------|
+| Frontend  | Angular                          |
+| Backend   | Flask + Flask-RESTful + CORS     |
+| Database  | MongoDB                          |
+| AI Models | Groq LLaMA-3.1 + SentenceTransformers |
+| Search    | FAISS                            |
+| PDF       | pdfplumber                       |
 
 ---
 
@@ -99,32 +124,3 @@ Ensure the following are installed on your system:
    ```bash
    flask run
    ```
-# MongoDB Configuration
-
-Follow these steps to configure MongoDB for the hackathon project:
-
-1. **Open MongoDB Compass or your MongoDB client**:
-   - Launch MongoDB Compas
-
-2. **Connect to your MongoDB instance**:
-   - Use the following connection string:
-     ```
-     mongodb://localhost:27017
-     ```
-   - Ensure your MongoDB service is running locally.
-
-3. **Create a new database**:
-   - Name the database:
-     ```
-     authentication_db
-     ```
-
-4. **Set up the required collections and data**:
-   - Based on the application's requirements, create necessary collections ( `users`).
-
----
-
-For any issues with MongoDB configuration:
-- Ensure MongoDB service is running (`mongod`).
-- Verify the connection URI matches your MongoDB setup.
-
