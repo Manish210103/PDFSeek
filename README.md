@@ -1,4 +1,4 @@
-# Hackathon Project
+# PDFSeek
 
 This repository contains the **frontend** and **backend** code for the hackathon project. The frontend is built with **Angular**, and the backend is developed using **Flask** with **MongoDB** for database management and **Groq** for API handling.
 
