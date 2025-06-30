@@ -1,0 +1,35 @@
+<div class="file-upload-container">
+  <h2>Upload PDF Files</h2>
+
+  <form [formGroup]="uploadForm" (ngSubmit)="submit()">
+    <div class="upload-area">
+      <label for="pdf-input" class="drop-zone">
+        Drag and drop files here or click to upload
+        <input
+          id="pdf-input"
+          type="file"
+          accept="application/pdf"
+          multiple
+          (change)="onFileChange($event)"
+          formControlName="pdfFiles"
+        />
+      </label>
+    </div>
+    <div *ngIf="uploadedFiles.length === 0" class="no-pdf">
+        <img class="pdf-icon" src="assets/pdf-file.png">
+        <p>No PDF Uploaded Yet</p>
+    </div>
+    <div class="uploaded-files" *ngIf="uploadedFiles.length > 0">
+      <ul>
+        <li *ngFor="let file of uploadedFiles; index as i">
+          {{ file.name }}
+          <button (click)="removeFile(i)">Remove</button>
+        </li>
+      </ul>
+    </div>
+    <div class="loading" *ngIf="loading">
+      <img src="assets/loading.gif" alt="">
+    </div>
+    <button class="submit" [disabled]="uploadedFiles.length === 0">Submit</button>
+  </form>
+</div>

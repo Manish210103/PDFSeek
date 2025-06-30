@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="left">
+    <div class="box" *ngIf="!signup">
+      <h2>Sign In</h2>
+      <input type="text" [(ngModel)]="username" placeholder="Username" required />
+      <input type="password" [(ngModel)]="password" placeholder="Password" required />
+      <button (click)="onLogin()">Login</button>
+      <p (click)="toggle()">New user? <span>Signup</span></p>
+      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+      <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+    </div>
+
+    <div class="box" *ngIf="signup">
+      <h2>Sign Up</h2>
+      <input type="text" [(ngModel)]="username" placeholder="Username" required />
+      <input type="password" [(ngModel)]="password" placeholder="Password" required />
+      <button (click)="onSignup()">Sign Up</button>
+      <p (click)="toggle()">Already have an account? <span>Signin</span></p>
+      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+      <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <img class="bot-icon" src="assets/chatbot.svg" alt="" />
+    <h2>CHATBOT</h2>
+  </div>
+</div>

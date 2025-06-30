@@ -1,0 +1,7 @@
+<div *ngIf="!loggedin" class="container">
+  <app-login (loggedInEvent)="onLoggedIn($event)"></app-login>
+</div>
+<div class="container" *ngIf="loggedin">
+  <app-pdf-extraction (loggedInEvent)="onLoggedIn($event)" [username]="username"></app-pdf-extraction>
+  <app-chatbot></app-chatbot>
+</div>

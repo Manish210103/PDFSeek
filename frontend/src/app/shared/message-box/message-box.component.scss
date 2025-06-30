@@ -1,0 +1,36 @@
+.message-box {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 10px;
+    background-color: rgb(56, 56, 56);
+    border-radius: 5px;
+
+    .avatar {
+        background: black;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: white;
+    }
+    .bot{
+        position: relative;
+        left: 95%;
+        background: black;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: white;
+    }
+
+    .text {
+        color: white;
+        max-width: 85%;
+    }
+}

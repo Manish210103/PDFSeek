@@ -1,0 +1,21 @@
+<div class="chatbot">
+   <div class="chatbot-header">
+    <h2>Chatbot</h2>
+    <img class="download-icon" src="assets/download.png" (click)="exportChat()"/>
+   </div>
+    <div class="container">
+        <div class="messages">
+            <app-message-box
+            *ngFor="let message of messages"
+            [message]="message.content"
+            [role]="message.role"
+            >
+            </app-message-box>
+        </div>
+        <input
+            type="text"
+            placeholder="Please enter your message"
+            [(ngModel)]="newMessage"
+            (keydown.enter)="sendMessage()" />
+    </div>
+</div>
