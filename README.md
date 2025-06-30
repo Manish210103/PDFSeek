@@ -87,7 +87,7 @@ To use the Groq API in this project, you need to obtain an API key. Follow the s
      ```
      The application will be accessible at [http://localhost:4200/](http://localhost:4200/)
 
-# Backend Setup for Hackathon Project
+# Backend Setup
 
 This document provides instructions to set up the backend for the hackathon project, developed using **Flask** with **MongoDB** and **Groq** for API handling.
 
